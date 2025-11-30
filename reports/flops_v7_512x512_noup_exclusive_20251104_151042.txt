@@ -1,0 +1,1135 @@
+Guardando reporte completo en: reports/flops_v7_512x512_noup_exclusive_20251104_151042.txt
+
+
+==============================
+Arch  : ChangeFormerV7
+Input : (x1,x2) => (3, 512, 512) c/u
+Params: 243.730 M
+FLOPs : 8871.457 GFLOPs (include_upsample=False, tree_mode=exclusive)
+==============================
+
+ChangeFormerV7(
+(Tenc_x2): EncoderTransformer_v4(
+  120.688 M, 49.517% Params, 589.635 GFLOPs,  6.646% FLOPs, 
+  (patch_embed1): OverlapPatchEmbed(
+    0.019 M,  0.008% Params, 5.100 GFLOPs,  0.057% FLOPs, 
+    (proj): Conv2d(
+      0.009 M,  0.004% Params, 4.933 GFLOPs,  0.056% FLOPs, 
+    )
+    (norm): LayerNorm(
+      0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+    )
+  )
+  (patch_embed2): OverlapPatchEmbed(
+    0.804 M,  0.330% Params, 52.697 GFLOPs,  0.594% FLOPs, 
+    (proj): Conv2d(
+      0.402 M,  0.165% Params, 52.613 GFLOPs,  0.593% FLOPs, 
+    )
+    (norm): LayerNorm(
+      0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+    )
+  )
+  (patch_embed3): OverlapPatchEmbed(
+    4.016 M,  1.648% Params, 65.819 GFLOPs,  0.742% FLOPs, 
+    (proj): Conv2d(
+      2.007 M,  0.824% Params, 65.767 GFLOPs,  0.741% FLOPs, 
+    )
+    (norm): LayerNorm(
+      0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+    )
+  )
+  (patch_embed4): OverlapPatchEmbed(
+    16.059 M,  6.589% Params, 65.788 GFLOPs,  0.742% FLOPs, 
+    (proj): Conv2d(
+      8.029 M,  3.294% Params, 65.767 GFLOPs,  0.741% FLOPs, 
+    )
+    (norm): LayerNorm(
+      0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (block1): ModuleList(
+    2.998 M,  1.230% Params, 82.349 GFLOPs,  0.928% FLOPs, 
+    (0): BlockLinear(
+      0.685 M,  0.281% Params, 27.450 GFLOPs,  0.309% FLOPs, 
+      (norm1): LayerNorm(
+        0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.033 M,  0.014% Params, 6.576 GFLOPs,  0.074% FLOPs, 
+        (to_q): Linear(
+          0.004 M,  0.002% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.004 M,  0.002% Params, 0.034 GFLOPs,  0.000% FLOPs, 
+        )
+        (to_v): Linear(
+          0.004 M,  0.002% Params, 0.034 GFLOPs,  0.000% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.004 M,  0.002% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.262 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.000 M,  0.000% Params, 0.003 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): Identity(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+      )
+      (mlp): Mlp(
+        0.074 M,  0.030% Params, 18.388 GFLOPs,  0.207% FLOPs, 
+        (fc1): Linear(
+          0.017 M,  0.007% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.005 M,  0.002% Params, 1.208 GFLOPs,  0.014% FLOPs, 
+          (dwconv): Conv2d(
+            0.003 M,  0.001% Params, 1.208 GFLOPs,  0.014% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.016 M,  0.007% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (1): BlockLinear(
+      0.685 M,  0.281% Params, 27.450 GFLOPs,  0.309% FLOPs, 
+      (norm1): LayerNorm(
+        0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.033 M,  0.014% Params, 6.576 GFLOPs,  0.074% FLOPs, 
+        (to_q): Linear(
+          0.004 M,  0.002% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.004 M,  0.002% Params, 0.034 GFLOPs,  0.000% FLOPs, 
+        )
+        (to_v): Linear(
+          0.004 M,  0.002% Params, 0.034 GFLOPs,  0.000% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.004 M,  0.002% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.262 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.000 M,  0.000% Params, 0.003 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+      )
+      (mlp): Mlp(
+        0.074 M,  0.030% Params, 18.388 GFLOPs,  0.207% FLOPs, 
+        (fc1): Linear(
+          0.017 M,  0.007% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.005 M,  0.002% Params, 1.208 GFLOPs,  0.014% FLOPs, 
+          (dwconv): Conv2d(
+            0.003 M,  0.001% Params, 1.208 GFLOPs,  0.014% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.016 M,  0.007% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (2): BlockLinear(
+      0.685 M,  0.281% Params, 27.450 GFLOPs,  0.309% FLOPs, 
+      (norm1): LayerNorm(
+        0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.033 M,  0.014% Params, 6.576 GFLOPs,  0.074% FLOPs, 
+        (to_q): Linear(
+          0.004 M,  0.002% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.004 M,  0.002% Params, 0.034 GFLOPs,  0.000% FLOPs, 
+        )
+        (to_v): Linear(
+          0.004 M,  0.002% Params, 0.034 GFLOPs,  0.000% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.004 M,  0.002% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.262 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.000 M,  0.000% Params, 0.003 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+      )
+      (mlp): Mlp(
+        0.074 M,  0.030% Params, 18.388 GFLOPs,  0.207% FLOPs, 
+        (fc1): Linear(
+          0.017 M,  0.007% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.005 M,  0.002% Params, 1.208 GFLOPs,  0.014% FLOPs, 
+          (dwconv): Conv2d(
+            0.003 M,  0.001% Params, 1.208 GFLOPs,  0.014% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.016 M,  0.007% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+  )
+  (norm1): LayerNorm(
+    0.000 M,  0.000% Params, 0.168 GFLOPs,  0.002% FLOPs, 
+  )
+  (block2): ModuleList(
+    4.817 M,  1.976% Params, 77.477 GFLOPs,  0.873% FLOPs, 
+    (0): BlockLinear(
+      1.140 M,  0.468% Params, 25.826 GFLOPs,  0.291% FLOPs, 
+      (norm1): LayerNorm(
+        0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.132 M,  0.054% Params, 5.721 GFLOPs,  0.064% FLOPs, 
+        (to_q): Linear(
+          0.017 M,  0.007% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.017 M,  0.007% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+        )
+        (to_v): Linear(
+          0.017 M,  0.007% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.017 M,  0.007% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.262 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.000 M,  0.000% Params, 0.005 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+      )
+      (mlp): Mlp(
+        0.279 M,  0.114% Params, 17.784 GFLOPs,  0.200% FLOPs, 
+        (fc1): Linear(
+          0.066 M,  0.027% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.010 M,  0.004% Params, 0.604 GFLOPs,  0.007% FLOPs, 
+          (dwconv): Conv2d(
+            0.005 M,  0.002% Params, 0.604 GFLOPs,  0.007% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.066 M,  0.027% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (1): BlockLinear(
+      1.140 M,  0.468% Params, 25.826 GFLOPs,  0.291% FLOPs, 
+      (norm1): LayerNorm(
+        0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.132 M,  0.054% Params, 5.721 GFLOPs,  0.064% FLOPs, 
+        (to_q): Linear(
+          0.017 M,  0.007% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.017 M,  0.007% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+        )
+        (to_v): Linear(
+          0.017 M,  0.007% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.017 M,  0.007% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.262 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.000 M,  0.000% Params, 0.005 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+      )
+      (mlp): Mlp(
+        0.279 M,  0.114% Params, 17.784 GFLOPs,  0.200% FLOPs, 
+        (fc1): Linear(
+          0.066 M,  0.027% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.010 M,  0.004% Params, 0.604 GFLOPs,  0.007% FLOPs, 
+          (dwconv): Conv2d(
+            0.005 M,  0.002% Params, 0.604 GFLOPs,  0.007% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.066 M,  0.027% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (2): BlockLinear(
+      1.140 M,  0.468% Params, 25.826 GFLOPs,  0.291% FLOPs, 
+      (norm1): LayerNorm(
+        0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.132 M,  0.054% Params, 5.721 GFLOPs,  0.064% FLOPs, 
+        (to_q): Linear(
+          0.017 M,  0.007% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.017 M,  0.007% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+        )
+        (to_v): Linear(
+          0.017 M,  0.007% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.017 M,  0.007% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.262 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.000 M,  0.000% Params, 0.005 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+      )
+      (mlp): Mlp(
+        0.279 M,  0.114% Params, 17.784 GFLOPs,  0.200% FLOPs, 
+        (fc1): Linear(
+          0.066 M,  0.027% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.010 M,  0.004% Params, 0.604 GFLOPs,  0.007% FLOPs, 
+          (dwconv): Conv2d(
+            0.005 M,  0.002% Params, 0.604 GFLOPs,  0.007% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.066 M,  0.027% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+  )
+  (norm2): LayerNorm(
+    0.000 M,  0.000% Params, 0.084 GFLOPs,  0.001% FLOPs, 
+  )
+  (block3): ModuleList(
+    24.905 M, 10.218% Params, 160.569 GFLOPs,  1.810% FLOPs, 
+    (0): BlockLinear(
+      4.570 M,  1.875% Params, 40.142 GFLOPs,  0.452% FLOPs, 
+      (norm1): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.822 M,  0.337% Params, 9.448 GFLOPs,  0.106% FLOPs, 
+        (to_q): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (to_k): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (to_v): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.410 M,  0.168% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.001 M,  0.000% Params, 0.013 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (mlp): Mlp(
+        1.680 M,  0.689% Params, 27.221 GFLOPs,  0.307% FLOPs, 
+        (fc1): Linear(
+          0.411 M,  0.169% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.026 M,  0.011% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          (dwconv): Conv2d(
+            0.013 M,  0.005% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.410 M,  0.168% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (1): BlockLinear(
+      4.570 M,  1.875% Params, 40.142 GFLOPs,  0.452% FLOPs, 
+      (norm1): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.822 M,  0.337% Params, 9.448 GFLOPs,  0.106% FLOPs, 
+        (to_q): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (to_k): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (to_v): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.410 M,  0.168% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.001 M,  0.000% Params, 0.013 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (mlp): Mlp(
+        1.680 M,  0.689% Params, 27.221 GFLOPs,  0.307% FLOPs, 
+        (fc1): Linear(
+          0.411 M,  0.169% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.026 M,  0.011% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          (dwconv): Conv2d(
+            0.013 M,  0.005% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.410 M,  0.168% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (2): BlockLinear(
+      4.570 M,  1.875% Params, 40.142 GFLOPs,  0.452% FLOPs, 
+      (norm1): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.822 M,  0.337% Params, 9.448 GFLOPs,  0.106% FLOPs, 
+        (to_q): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (to_k): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (to_v): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.410 M,  0.168% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.001 M,  0.000% Params, 0.013 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (mlp): Mlp(
+        1.680 M,  0.689% Params, 27.221 GFLOPs,  0.307% FLOPs, 
+        (fc1): Linear(
+          0.411 M,  0.169% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.026 M,  0.011% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          (dwconv): Conv2d(
+            0.013 M,  0.005% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.410 M,  0.168% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (3): BlockLinear(
+      4.570 M,  1.875% Params, 40.142 GFLOPs,  0.452% FLOPs, 
+      (norm1): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (attn): LinearAttention(
+        0.822 M,  0.337% Params, 9.448 GFLOPs,  0.106% FLOPs, 
+        (to_q): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (to_k): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (to_v): Linear(
+          0.103 M,  0.042% Params, 0.839 GFLOPs,  0.009% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.103 M,  0.042% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (sr): Conv2d(
+        0.410 M,  0.168% Params, 3.355 GFLOPs,  0.038% FLOPs, 
+      )
+      (norm_kv): LayerNorm(
+        0.001 M,  0.000% Params, 0.013 GFLOPs,  0.000% FLOPs, 
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+      )
+      (mlp): Mlp(
+        1.680 M,  0.689% Params, 27.221 GFLOPs,  0.307% FLOPs, 
+        (fc1): Linear(
+          0.411 M,  0.169% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.026 M,  0.011% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          (dwconv): Conv2d(
+            0.013 M,  0.005% Params, 0.377 GFLOPs,  0.004% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          0.410 M,  0.168% Params, 13.422 GFLOPs,  0.151% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+  )
+  (norm3): LayerNorm(
+    0.001 M,  0.000% Params, 0.052 GFLOPs,  0.001% FLOPs, 
+  )
+  (block4): ModuleList(
+    38.130 M, 15.644% Params, 79.511 GFLOPs,  0.896% FLOPs, 
+    (0): BlockLinear(
+      9.537 M,  3.913% Params, 26.504 GFLOPs,  0.299% FLOPs, 
+      (norm1): LayerNorm(
+        0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+      )
+      (attn): LinearAttention(
+        2.101 M,  0.862% Params, 9.131 GFLOPs,  0.103% FLOPs, 
+        (to_q): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_v): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+      )
+      (mlp): Mlp(
+        4.261 M,  1.748% Params, 17.331 GFLOPs,  0.195% FLOPs, 
+        (fc1): Linear(
+          1.051 M,  0.431% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.041 M,  0.017% Params, 0.151 GFLOPs,  0.002% FLOPs, 
+          (dwconv): Conv2d(
+            0.020 M,  0.008% Params, 0.151 GFLOPs,  0.002% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          1.049 M,  0.430% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (1): BlockLinear(
+      9.537 M,  3.913% Params, 26.504 GFLOPs,  0.299% FLOPs, 
+      (norm1): LayerNorm(
+        0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+      )
+      (attn): LinearAttention(
+        2.101 M,  0.862% Params, 9.131 GFLOPs,  0.103% FLOPs, 
+        (to_q): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_v): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+      )
+      (mlp): Mlp(
+        4.261 M,  1.748% Params, 17.331 GFLOPs,  0.195% FLOPs, 
+        (fc1): Linear(
+          1.051 M,  0.431% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.041 M,  0.017% Params, 0.151 GFLOPs,  0.002% FLOPs, 
+          (dwconv): Conv2d(
+            0.020 M,  0.008% Params, 0.151 GFLOPs,  0.002% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          1.049 M,  0.430% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+    (2): BlockLinear(
+      9.537 M,  3.913% Params, 26.504 GFLOPs,  0.299% FLOPs, 
+      (norm1): LayerNorm(
+        0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+      )
+      (attn): LinearAttention(
+        2.101 M,  0.862% Params, 9.131 GFLOPs,  0.103% FLOPs, 
+        (to_q): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_k): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (to_v): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (feature_map): PositiveFeatureMap(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (attn_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (proj): Linear(
+          0.263 M,  0.108% Params, 2.147 GFLOPs,  0.024% FLOPs, 
+        )
+        (proj_drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+      (drop_path): DropPath(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+      (norm2): LayerNorm(
+        0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+      )
+      (mlp): Mlp(
+        4.261 M,  1.748% Params, 17.331 GFLOPs,  0.195% FLOPs, 
+        (fc1): Linear(
+          1.051 M,  0.431% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (dwconv): DWConv(
+          0.041 M,  0.017% Params, 0.151 GFLOPs,  0.002% FLOPs, 
+          (dwconv): Conv2d(
+            0.020 M,  0.008% Params, 0.151 GFLOPs,  0.002% FLOPs, 
+          )
+        )
+        (act): GELU(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+        (fc2): Linear(
+          1.049 M,  0.430% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+        )
+        (drop): Dropout(
+          0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+        )
+      )
+    )
+  )
+  (norm4): LayerNorm(
+    0.001 M,  0.000% Params, 0.021 GFLOPs,  0.000% FLOPs, 
+  )
+)
+(TDec_x2): DecoderTransformer_v3(
+  40.988 M, 16.817% Params, 8281.822 GFLOPs, 93.354% FLOPs, 
+  (linear_c4): MLP(
+    0.263 M,  0.108% Params, 1.074 GFLOPs,  0.012% FLOPs, 
+    (proj): Linear(
+      0.131 M,  0.054% Params, 1.074 GFLOPs,  0.012% FLOPs, 
+    )
+  )
+  (linear_c3): MLP(
+    0.164 M,  0.067% Params, 2.684 GFLOPs,  0.030% FLOPs, 
+    (proj): Linear(
+      0.082 M,  0.034% Params, 2.684 GFLOPs,  0.030% FLOPs, 
+    )
+  )
+  (linear_c2): MLP(
+    0.066 M,  0.027% Params, 4.295 GFLOPs,  0.048% FLOPs, 
+    (proj): Linear(
+      0.033 M,  0.014% Params, 4.295 GFLOPs,  0.048% FLOPs, 
+    )
+  )
+  (linear_c1): MLP(
+    0.033 M,  0.014% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+    (proj): Linear(
+      0.017 M,  0.007% Params, 8.590 GFLOPs,  0.097% FLOPs, 
+    )
+  )
+  (diff_c4): Sequential(
+    3.541 M,  1.453% Params, 7.250 GFLOPs,  0.082% FLOPs, 
+    (0): Conv2d(
+      1.180 M,  0.484% Params, 4.832 GFLOPs,  0.054% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.001 M,  0.000% Params, 0.002 GFLOPs,  0.000% FLOPs, 
+    )
+    (3): Conv2d(
+      0.590 M,  0.242% Params, 2.416 GFLOPs,  0.027% FLOPs, 
+    )
+    (4): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (diff_c3): Sequential(
+    3.541 M,  1.453% Params, 28.999 GFLOPs,  0.327% FLOPs, 
+    (0): Conv2d(
+      1.180 M,  0.484% Params, 19.327 GFLOPs,  0.218% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.001 M,  0.000% Params, 0.008 GFLOPs,  0.000% FLOPs, 
+    )
+    (3): Conv2d(
+      0.590 M,  0.242% Params, 9.664 GFLOPs,  0.109% FLOPs, 
+    )
+    (4): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (diff_c2): Sequential(
+    3.541 M,  1.453% Params, 115.998 GFLOPs,  1.308% FLOPs, 
+    (0): Conv2d(
+      1.180 M,  0.484% Params, 77.309 GFLOPs,  0.871% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.001 M,  0.000% Params, 0.034 GFLOPs,  0.000% FLOPs, 
+    )
+    (3): Conv2d(
+      0.590 M,  0.242% Params, 38.655 GFLOPs,  0.436% FLOPs, 
+    )
+    (4): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (diff_c1): Sequential(
+    3.541 M,  1.453% Params, 463.991 GFLOPs,  5.230% FLOPs, 
+    (0): Conv2d(
+      1.180 M,  0.484% Params, 309.238 GFLOPs,  3.486% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.001 M,  0.000% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+    )
+    (3): Conv2d(
+      0.590 M,  0.242% Params, 154.619 GFLOPs,  1.743% FLOPs, 
+    )
+    (4): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (make_pred_c4): Sequential(
+    0.009 M,  0.004% Params, 0.019 GFLOPs,  0.000% FLOPs, 
+    (0): Conv2d(
+      0.005 M,  0.002% Params, 0.019 GFLOPs,  0.000% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (3): Conv2d(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (make_pred_c3): Sequential(
+    0.009 M,  0.004% Params, 0.076 GFLOPs,  0.001% FLOPs, 
+    (0): Conv2d(
+      0.005 M,  0.002% Params, 0.075 GFLOPs,  0.001% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (3): Conv2d(
+      0.000 M,  0.000% Params, 0.001 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (make_pred_c2): Sequential(
+    0.009 M,  0.004% Params, 0.305 GFLOPs,  0.003% FLOPs, 
+    (0): Conv2d(
+      0.005 M,  0.002% Params, 0.302 GFLOPs,  0.003% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (3): Conv2d(
+      0.000 M,  0.000% Params, 0.002 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (make_pred_c1): Sequential(
+    0.009 M,  0.004% Params, 1.218 GFLOPs,  0.014% FLOPs, 
+    (0): Conv2d(
+      0.005 M,  0.002% Params, 1.208 GFLOPs,  0.014% FLOPs, 
+    )
+    (1): ReLU(
+      0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+    )
+    (2): BatchNorm2d(
+      0.000 M,  0.000% Params, 0.001 GFLOPs,  0.000% FLOPs, 
+    )
+    (3): Conv2d(
+      0.000 M,  0.000% Params, 0.009 GFLOPs,  0.000% FLOPs, 
+    )
+  )
+  (linear_fuse): Sequential(
+    0.526 M,  0.216% Params, 68.854 GFLOPs,  0.776% FLOPs, 
+    (0): Conv2d(
+      0.262 M,  0.108% Params, 68.719 GFLOPs,  0.775% FLOPs, 
+    )
+    (1): BatchNorm2d(
+      0.001 M,  0.000% Params, 0.134 GFLOPs,  0.002% FLOPs, 
+    )
+  )
+  (convd2x): UpsampleConvLayer(
+    2.098 M,  0.861% Params, 274.878 GFLOPs,  3.098% FLOPs, 
+    (conv2d): ConvTranspose2d(
+      1.049 M,  0.430% Params, 274.878 GFLOPs,  3.098% FLOPs, 
+    )
+  )
+  (dense_2x): Sequential(
+    4.721 M,  1.937% Params, 1236.951 GFLOPs, 13.943% FLOPs, 
+    (0): ResidualBlock(
+      3.540 M,  1.453% Params, 1236.951 GFLOPs, 13.943% FLOPs, 
+      (conv1): ConvLayer(
+        1.180 M,  0.484% Params, 618.475 GFLOPs,  6.972% FLOPs, 
+        (conv2d): Conv2d(
+          0.590 M,  0.242% Params, 618.475 GFLOPs,  6.972% FLOPs, 
+        )
+      )
+      (conv2): ConvLayer(
+        1.180 M,  0.484% Params, 618.475 GFLOPs,  6.972% FLOPs, 
+        (conv2d): Conv2d(
+          0.590 M,  0.242% Params, 618.475 GFLOPs,  6.972% FLOPs, 
+        )
+      )
+      (relu): ReLU(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+    )
+  )
+  (convd1x): UpsampleConvLayer(
+    2.098 M,  0.861% Params, 1099.512 GFLOPs, 12.394% FLOPs, 
+    (conv2d): ConvTranspose2d(
+      1.049 M,  0.430% Params, 1099.512 GFLOPs, 12.394% FLOPs, 
+    )
+  )
+  (dense_1x): Sequential(
+    4.721 M,  1.937% Params, 4947.802 GFLOPs, 55.772% FLOPs, 
+    (0): ResidualBlock(
+      3.540 M,  1.453% Params, 4947.802 GFLOPs, 55.772% FLOPs, 
+      (conv1): ConvLayer(
+        1.180 M,  0.484% Params, 2473.901 GFLOPs, 27.886% FLOPs, 
+        (conv2d): Conv2d(
+          0.590 M,  0.242% Params, 2473.901 GFLOPs, 27.886% FLOPs, 
+        )
+      )
+      (conv2): ConvLayer(
+        1.180 M,  0.484% Params, 2473.901 GFLOPs, 27.886% FLOPs, 
+        (conv2d): Conv2d(
+          0.590 M,  0.242% Params, 2473.901 GFLOPs, 27.886% FLOPs, 
+        )
+      )
+      (relu): ReLU(
+        0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+      )
+    )
+  )
+  (change_probability): ConvLayer(
+    0.009 M,  0.004% Params, 19.327 GFLOPs,  0.218% FLOPs, 
+    (conv2d): Conv2d(
+      0.005 M,  0.002% Params, 19.327 GFLOPs,  0.218% FLOPs, 
+    )
+  )
+  (active): Sigmoid(
+    0.000 M,  0.000% Params, 0.000 GFLOPs,  0.000% FLOPs, 
+  )
+)
+)
+
+---- Resumen por tipo de operador ----
+other     : 8871.457 GFLOPs  (100.00%)
+--------------------------------------
+
+
+---- Top 10 módulos por FLOPs (exclusivos) ----
+                                                                       8871.457 GFLOPs (100.00%)
+TDec_x2                                                                8281.822 GFLOPs ( 93.35%)
+TDec_x2.dense_1x                                                       4947.802 GFLOPs ( 55.77%)
+TDec_x2.dense_1x.0                                                     4947.802 GFLOPs ( 55.77%)
+TDec_x2.dense_1x.0.conv1                                               2473.901 GFLOPs ( 27.89%)
+TDec_x2.dense_1x.0.conv1.conv2d                                        2473.901 GFLOPs ( 27.89%)
+TDec_x2.dense_1x.0.conv2                                               2473.901 GFLOPs ( 27.89%)
+TDec_x2.dense_1x.0.conv2.conv2d                                        2473.901 GFLOPs ( 27.89%)
+TDec_x2.dense_2x                                                       1236.951 GFLOPs ( 13.94%)
+TDec_x2.dense_2x.0                                                     1236.951 GFLOPs ( 13.94%)
+-----------------------------------------------
+
+⚠️  Ops no soportadas por fvcore (FLOPs no contados):
+  - aten::div: 104
+  - aten::mul: 28
+  - aten::elu: 52
+  - aten::add: 135
+  - aten::sum: 26
+  - aten::gelu: 26
+
+Nota: suelen ser ops element-wise/activaciones; el coste dominante está en matmul/addmm y lineales.

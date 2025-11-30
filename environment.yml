@@ -1,0 +1,25 @@
+# environment.yml
+name: changeformer
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  # PyTorch estable para Ampere con CUDA 11.x (driver 560 lo soporta sin problema)
+  - pytorch=1.12.*
+  - torchvision=0.13.*
+  - torchaudio=0.12.*
+  - cudatoolkit=11.6
+  # libs del repo
+  - einops=0.3.*
+  - timm=0.4.12
+  - numpy=1.21.*
+  - scipy=1.7.*
+  - matplotlib=3.4.*
+  - pillow<9
+  - tqdm
+  - ffmpeg
+  - pip
+  - pip:
+      - opencv-python
