@@ -1,5 +1,7 @@
 # RALA-ChangeFormer
 
+I am proud to announce that our paper has been accepted at the VISAPP 2026 international conference (International Conference on Computer Vision Theory and Applications). 🎉🎉
+
 This repository contains the full implementation used for the experiments in **“Efficient Multi-Temporal Building Change Detection with Reduced-Rank Linear Attention”**.  
 Our work extends the original **ChangeFormer** architecture by replacing its encoder Multi-Head Self-Attention (MHSA) modules with **Rank-Augmented Linear Attention (RALA)**, enabling more memory-efficient and scalable training for Very High Resolution (VHR) Building Change Detection (BCD).
 
@@ -137,11 +139,11 @@ vis/
 If you use this repository or ideas from our work, please cite:
 
 ```bibtex
-@article{rala_changeformer_2025,
+@article{Acuña2026RALAChangeFormer,
   title={Efficient Multi-Temporal Building Change Detection with Reduced-Rank Linear Attention},
-  author={Anonymous},
-  journal={Under Review},
-  year={2025}
+  author={Acuña V.R. García Z.G. Lopez A.C. and Mora. C.V.},
+  booktitle={Scitepress},
+  year={2026}
 }
 ```
 
