@@ -12,7 +12,7 @@ The codebase includes:
 - Tools to extract **attention maps** for both ChangeFormer and RALA-ChangeFormer
 - Checkpoint loaders compatible with the original ChangeFormer structure
 
-Get the article version on: [Paper](https://drive.google.com/file/d/15Wv8TGyQ_TsALN5yaghsJS0l5LoHcwXM/view?usp=sharing)
+Get the article version on: [Paper](https://drive.google.com/file/d/10TxK3TTOYMzu8iKb2hxGyFU4DJkXmYLe/view?usp=sharing)
 
 ---
 
