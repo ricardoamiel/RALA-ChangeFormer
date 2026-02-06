@@ -12,7 +12,7 @@ The codebase includes:
 - Tools to extract **attention maps** for both ChangeFormer and RALA-ChangeFormer
 - Checkpoint loaders compatible with the original ChangeFormer structure
 
-Get the article version on: [Paper](https://drive.google.com/file/d/10TxK3TTOYMzu8iKb2hxGyFU4DJkXmYLe/view?usp=sharing)
+Get the article version on: [Paper](https://drive.google.com/file/d/1fV8hum6iAp3-s4cuT1AAMJpy01A6W28c/view?usp=sharing)
 
 ---
 
@@ -142,6 +142,7 @@ If you use this repository or ideas from our work, please cite:
 @article{Acuña2026RALAChangeFormer,
   title={Efficient Multi-Temporal Building Change Detection with Reduced-Rank Linear Attention},
   author={Acuña-Villogas, R. A.; García-Zanabria, G.; Lopez, C. and Mora-Colque, R.},
+  conference = {VISAPP 2026},
   booktitle={Scitepress},
   year={2026}
 }
