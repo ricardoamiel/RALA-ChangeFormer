@@ -141,7 +141,7 @@ If you use this repository or ideas from our work, please cite:
 ```bibtex
 @article{Acuña2026RALAChangeFormer,
   title={Efficient Multi-Temporal Building Change Detection with Reduced-Rank Linear Attention},
-  author={Acuña V.R. García Z.G. Lopez A.C. and Mora. C.V.},
+  author={Acuña-Villogas, R. A.; García-Zanabria, G.; Lopez, C. and Mora-Colque, R.},
   booktitle={Scitepress},
   year={2026}
 }
